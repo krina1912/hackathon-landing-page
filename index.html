@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon landing page</title>
+  </head>
+  <body>
+    <section>
+      <div class="circle">
+
+      </div>
+      <header>
+        <a href="#" class="hackathon logo"> <img src="hackathon.png" class="hackathon img" alt=""> </a>
+        <div class="toggle" onclick="toggleMenu()">
+
+        </div>
+        <ul class="navigation">
+          <li ><a href="#Home">Home</a></li>
+          <li><a href="#Prizes">Prizes</a></li>
+          <li><a href="#Sponsors">Sponsors</a></li>
+          <li><a href="#Contact">Contact</a></li>
+
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just any Hackathon <br>It's <span>Hackoff</span></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            Ut enim ad minim veniam
+          </p>
+          <a href="#">Register Now</a>
+        </div>
+        <div class="imgBox">
+          <img src="ml.jpg" class="tracks" alt="">
+
+        </div>
+
+      </div>
+      <div class="tr">
+        <h4>TRACKS</h4>
+
+      </div>
+
+      <ul class="thumb">
+        <li> <img src="thumb 1.png"  onclick="imgSlider('ml.jpg');changeCircleColor('#6fbad5')" alt=""></li>
+        <li> <img src="thumb 2.png"  onclick="imgSlider('app dev.png');changeCircleColor('#283460')"alt=""> </li>
+        <li> <img src="thumb 3.png" onclick="imgSlider('web dev.PNG');changeCircleColor('#ec7161')"alt=""> </li>
+
+      </ul>
+      <ul class="sci">
+        <li> <a href="#"> <img src="facebook.png" alt=""> </a> </li>
+        <li> <a href="#"> <img src="twitter.png" alt=""> </a> </li>
+        <li> <a href="#"> <img src="instagram.png" alt=""> </a> </li>
+
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything){
+        document .querySelector('.tracks').src= anything;
+
+      }
+      function changeCircleColor(color){
+        const circle= document .querySelector('.circle');
+        circle.style.background=color;
+      }
+
+      function toggleMenu(){
+        var menuToggle= document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+
+
+      }
+
+    </script>
+  </body>
+</html>
